@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   # Add associations here 
+  has_many :rounds
+  has_many :decks, through: :rounds 
 
   validates :email, uniqueness: true 
 
