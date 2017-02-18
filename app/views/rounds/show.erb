@@ -1,4 +1,4 @@
-<h2>Congrats! You've made it through <%=@round.deck.description%></h2>
+<h2>Congrats! You've made it through the deck!</h2>
 
 <table>
   <tr>
@@ -8,11 +8,7 @@
   </tr>
   <tr>
     <td><%=@round.id%></td>
-  </tr>
-  <tr>
-    <td><%=@round.deck%></td>
-  </tr>
-  <tr>
+    <td><%=@round.deck.description%></td>
     <td><%="#{@round.score} / #{@round.deck.cards.length}"%></td>
   </tr>
 </table>
