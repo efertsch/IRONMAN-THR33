@@ -1,3 +1,4 @@
+
 Deck.destroy_all
 
 foods_details = { :description    => "Foods That Make Your Stomach Gurggle"}
