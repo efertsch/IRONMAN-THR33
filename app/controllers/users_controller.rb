@@ -31,13 +31,3 @@ put '/users/:id' do
 		erb :'/users/edit'
 	end
 end
-
-delete '/users/:id' do
-	@user.destroy
-	redirect '/'
-end
-
-get '/users/:id/edit' do
-	@user = User.find_by(id: params[:id])
-	erb :'/users/edit'
-end
