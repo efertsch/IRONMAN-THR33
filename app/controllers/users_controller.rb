@@ -4,31 +4,25 @@ get '/users' do
 	erb :index
 end
 
-get '/decks/users/new' do
+get '/users/new' do
 	erb :'/users/new'
 end
 
-post '/decks/users' do
+post '/users' do
 	@user = User.new(params[:user])
 	if @user.save
-		redirect "/decks/users/#{@user.id}"
+		redirect "/users/#{@user.id}"
 	else
 		erb :'/users/new'
 	end
 end
 
-get '/decks/users/:id' do
+get '/users/:id' do
 	@user = User.find_by(id: params[:id])
 	erb :'users/show'
 end
 
-
-get '/decks/users/:id/edit' do
-	@user = User.find_by(id: params[:id])
-	erb :'/users/edit'
-end
-
-put '/decks/users/:id' do
+put '/users/:id' do
 	@user = User.find_by(id: params[:id])
 	@user.assign_attributes(params[:user])
 	if @user.save
@@ -38,8 +32,12 @@ put '/decks/users/:id' do
 	end
 end
 
-delete '/decks/users/:id' do
+delete '/users/:id' do
 	@user.destroy
 	redirect '/'
 end
 
+get '/users/:id/edit' do
+	@user = User.find_by(id: params[:id])
+	erb :'/users/edit'
+end
