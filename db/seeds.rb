@@ -1,6 +1,12 @@
-User.destroy_all
+Deck.destroy_all
 
-users = 10.times do
-  User.create(name: Faker::Name.name, email: Faker::Internet.email, password: "password")
-end
+foods_details = { :description    => "Foods That Make Your Stomach Gurggle"}
 
+crepe_details = { :description    => "That Crepe I At..."}
+
+fanny_details = { :description    => "Name That Fanny"}
+
+
+Deck.create(foods_details)
+Deck.create(crepe_details)
+Deck.create(fanny_details)
