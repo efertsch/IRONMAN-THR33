@@ -21,13 +21,3 @@ get '/users/:id' do
 	@user = User.find_by(id: params[:id])
 	erb :'users/show'
 end
-
-put '/users/:id' do
-	@user = User.find_by(id: params[:id])
-	@user.assign_attributes(params[:user])
-	if @user.save
-		redirect '/users'
-	else
-		erb :'/users/edit'
-	end
-end
