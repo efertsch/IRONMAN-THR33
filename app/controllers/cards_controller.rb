@@ -1,10 +1,10 @@
 get '/cards' do
-	@first_card = Cards.first
+	@first_card = Card.first
 	redirect '/cards/1'
 end
 
-get '/cards/:id' do 
-	@cards = Cards.find_by_id(params[:id])
+get '/cards/:id' do
+	@cards = Card.find_by_id(params[:id])
 
   redirect '/increment'
 end
