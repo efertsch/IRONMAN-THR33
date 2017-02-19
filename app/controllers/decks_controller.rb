@@ -6,5 +6,5 @@ end
 
 get '/deck/:id' do
 	@decks = Deck.find_by(id: params[:id])
-	erb :'/deck/show'
+	redirect '/cards'
 end
