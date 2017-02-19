@@ -1,5 +1,5 @@
 $(function(){
-	next();
+	nextButton();
 });
 
 

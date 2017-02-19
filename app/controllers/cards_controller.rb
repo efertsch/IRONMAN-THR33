@@ -1,14 +1,19 @@
 get '/cards' do
-	@first_card = Card.first
-	redirect '/cards/1'
+	@card = Card.all
+
+	erb :'cards/card'
 end
 
-get '/cards/:id' do
+get '/decks/:id/cards' do
 	@cards = Card.find_by_id(params[:id])
 
-  redirect '/increment'
+  redirect "/cards"
 end
 
-get '/:increment' do
-  redirect "/cards/#{params[:increment]}"
+get '/decks/:id/cards/:id' do
+	@card = Card.find_by(id: params[:id])
+	current_user.decks << @card
+	redirect redirect '/users'
 end
+
+

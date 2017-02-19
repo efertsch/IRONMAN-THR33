@@ -6,5 +6,9 @@ end
 
 get '/decks/:id' do
 	@decks = Deck.find_by(id: params[:id])
-	erb :'/decks/show'
+	if logged_in?
+		erb :'/decks/show'
+	else
+		erb :'decks/error'
+	end
 end
