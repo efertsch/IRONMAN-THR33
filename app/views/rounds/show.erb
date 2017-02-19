@@ -1,0 +1,16 @@
+<h2>Congrats! You've made it through the deck!</h2>
+
+<table>
+  <tr>
+    <th>Round</th>
+    <th>Deck</th>
+    <th>Score</th>
+  </tr>
+  <tr>
+    <td><%=@round.id%></td>
+    <td><%=@round.deck.description%></td>
+    <td><%="#{@round.score} / #{@round.deck.cards.length}"%></td>
+  </tr>
+</table>
+
+<a href="/users/<%=@user.id%>">See All of Your Stats</a>

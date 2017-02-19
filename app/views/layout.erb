@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -14,6 +14,7 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <script src="/js/next.js"></script>
 
   <title></title>
 </head>
@@ -30,7 +31,7 @@
           </form>
         </li>
       </ul>
-    </nav> 
+    </nav>
   <%else %>
     <nav>
       <ul id=bar-if-out>
@@ -38,7 +39,7 @@
         <li><a href="/sessions/new">Login</a></li>
         <li><a href="/users/new">Register</a></li>
       </ul>
-    </nav> 
+    </nav>
   <%end%>
   <h1>Flash Cards, Yo.</h1>
   <%= yield %>
