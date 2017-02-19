@@ -1,6 +1,5 @@
 get '/cards' do
-	@card = Card.all
-
+	@cards = Card.all
 	erb :'cards/card'
 end
 
