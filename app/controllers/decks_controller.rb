@@ -4,7 +4,11 @@ get '/decks' do
 	erb :'/decks/index'
 end
 
-get '/deck/:id' do
+get '/decks/:id' do
 	@decks = Deck.find_by(id: params[:id])
-	redirect '/cards'
+	if logged_in?
+		erb :'/decks/show'
+	else
+		erb :'decks/error'
+	end
 end

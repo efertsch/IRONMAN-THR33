@@ -1,14 +1,18 @@
+<style media="screen">
+  .deck {
+    color: pink !important;
+    font-size: 20px !important;
+  }
+</style>
   <center>
   <h1>Please Select Your Deck</h1>
-  <% @decks.each do |deck| %>
-    <li class="deck-list">
-      <article>
-        <h2>
-        <a href="/decks/<%= deck.id %>/cards"><font color="FF00CC"><%= deck.description %>
-        <br>
-      </font></a>
-      </h2>
-    </article>
-    </li>
-  <% end %>
 </center>
+
+  <ul>
+  <% @decks.each do |deck| %>
+     <ul class="deck-list">
+        <a class ="deck" href="/decks/<%= deck.id %>"> <%= deck.description %>
+    </a>
+  </ul>
+    <% end %>
+</ul>
