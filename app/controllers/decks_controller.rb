@@ -4,7 +4,7 @@ get '/decks' do
 end
 
 get '/decks/:id' do
-	@decks = Deck.find_by(id: params[:id])
+	@deck = Deck.find_by(id: params[:id])
 	if logged_in?
 		erb :'/decks/show'
 	else
