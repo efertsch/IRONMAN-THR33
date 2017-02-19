@@ -2,7 +2,7 @@ Deck.destroy_all
 
 foods_details = { :description    => "Foods That Make Your Stomach Gurggle"}
 
-crepe_details = { :description    => "That Crepe I At..."}
+crepe_details = { :description    => "That Crepe I Ate..."}
 
 fanny_details = { :description    => "Name That Fanny"}
 
