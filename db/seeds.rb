@@ -1,11 +1,3 @@
-# <<<<<<< HEAD
-# Deck.destroy_all
-#
-# foods_details = { :description    => "Foods That Make Your Stomach Gurggle"}
-#
-# crepe_details = { :description    => "That Crepe I Ate..."}
-# =======
-# >>>>>>> bc380d2f28095040d5ebc2809763f7615f9d4e31
 
 Deck.destroy_all
 User.destroy_all
