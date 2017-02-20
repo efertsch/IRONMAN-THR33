@@ -11,7 +11,7 @@
   <ul>
   <% @decks.each do |deck| %>
      <ul class="deck-list">
-        <a class ="deck" href="/decks/<%= deck.id %>"> <%= deck.description %>
+        <a class ="deck" href="/decks/<%= deck.id %>/cards/<%=deck.cards.first.id%>"> <%= deck.description %>
     </a>
   </ul>
     <% end %>

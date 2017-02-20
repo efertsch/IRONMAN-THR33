@@ -1,5 +1,9 @@
 helpers do
   def correct?(user_input)
-    user_input == @card.answer
+  	if user_input == @card.answer
+  		Round.score
+  	else
+  		nil
   end
+
 end
