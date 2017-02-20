@@ -5,3 +5,10 @@
   <input type="text" name="user_answer">
   <input type="submit" value="Answer">
 </form>
+
+// Not Yet Functional - issue with collecting user answer from form
+<% if correct?(@user_answer) %>
+  <p>Correct!</p>
+<%else%>
+  <p>You're the worst!</p>
+<%end%>

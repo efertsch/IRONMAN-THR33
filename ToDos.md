@@ -2,12 +2,10 @@
 
 - Display all stats on a users profile page
 - Fix nav bar conditional once logged in (after registering only)
-- On deck show page link to begin playing with that deck
-  - Are rounds initialized in that route?
 - Card show page (all the things)
-  - display a card (make a div?)
-  - display a question
-  - method in card that checks if answer is correct?
-- Determine how a round is ended (last card variable?)
+  - style a card (make a div?)
+  - determine if correct (helper method started) - also not entirely necessary
+- Nest all routes from user to be able to create a round and access round info
+  - method to determine score
   - routes to round show page
 
