@@ -1,3 +1,3 @@
 <h1><center><%=@deck.description%></center></h1>
 
-<a href=<%="/decks/#{@deck.id}/cards"%>>Click here to test your knowledge of something useless!</a>
+<a href=<%="/decks/#{@deck.id}/cards/#{@deck.cards.first.id}"%>>Click here to test your knowledge of something useless!</a>
