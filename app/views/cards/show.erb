@@ -1,19 +1,15 @@
-<h2>Maximum possible score: <%=@deck.cards.length%></h2>
 
 <center>
 	<div id=question-div>
-	<h3>Question:</h3>
+	<h2>Question:</h2>
+
 	<%=@card.question%>?
 	<form action=<%="/decks/#{@deck.id}/cards/#{@card.id}"%> method="post">
 	  <input type="text" name="user_answer">
 	  <input type="submit" value="Answer">
 	</form>
+
+	<h3>Maximum possible score: <%=@deck.cards.length%></h3>
 	
-	
-	<% if correct?(@user_answer) %>
-	  <p>Correct!</p>
-	<%else%>
-	  <p>You're the worst!</p>
-	<%end%>
 	</div>
 </center>
