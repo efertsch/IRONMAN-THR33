@@ -8,6 +8,6 @@ get '/decks/:id' do
 	if logged_in?
 		erb :'/decks/show'
 	else
-		erb :'decks/error'
+		redirect '/'
 	end
 end

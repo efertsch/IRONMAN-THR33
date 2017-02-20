@@ -1,14 +1,15 @@
-<h2>Maximum possible score: <%=@deck.cards.length%></h2>
-<p><%=@card.question%>?</p>
 
-<form action=<%="/decks/#{@deck.id}/cards/#{@card.id}"%> method="post">
-  <input type="text" name="user_answer">
-  <input type="submit" value="Answer">
-</form>
+<center>
+	<div id=question-div>
+	<h2>Question:</h2>
 
-// Not Yet Functional - issue with collecting user answer from form
-<% if correct?(@user_answer) %>
-  <p>Correct!</p>
-<%else%>
-  <p>You're the worst!</p>
-<%end%>
+	<%=@card.question%>?
+	<form action=<%="/decks/#{@deck.id}/cards/#{@card.id}"%> method="post">
+	  <input type="text" name="user_answer">
+	  <input type="submit" value="Answer">
+	</form>
+
+	<h3>Maximum possible score: <%=@deck.cards.length%></h3>
+	
+	</div>
+</center>

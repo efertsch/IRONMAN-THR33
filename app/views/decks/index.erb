@@ -4,15 +4,13 @@
     font-size: 20px !important;
   }
 </style>
-  <center>
-  <h1>Please Select Your Deck</h1>
-</center>
 
-  <ul>
+<center>
+  <h2>Please Select Your Deck</h2>
+
   <% @decks.each do |deck| %>
      <ul class="deck-list">
-        <a class ="deck" href="/decks/<%= deck.id %>/cards/<%=deck.cards.first.id%>"> <%= deck.description %>
-    </a>
-  </ul>
-    <% end %>
-</ul>
+        <a class ="deck" href="/decks/<%= deck.id %>/cards/<%=deck.cards.first.id%>"> <%= deck.description %> </a>
+      </ul>
+  <%end%>
+</center>

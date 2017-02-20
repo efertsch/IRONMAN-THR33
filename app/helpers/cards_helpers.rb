@@ -4,6 +4,7 @@ helpers do
   		Round.score
   	else
   		nil
+  	end
   end
 
 end

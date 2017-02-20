@@ -23,7 +23,7 @@
     <nav id="nav-bar">
       <ul id=bar-if-in>
         <li><a href="/">Home</a></li>
-        <li><a href="/users/<%=current_user.id%>">Profile</a></li>
+        <li><a href="/users/<%=current_user.id%>"><%=current_user.name.capitalize%></a></li>
         <li>
           <form id="the-form" action="/sessions" method="post">
             <input type="hidden" name="_method" value="delete">
